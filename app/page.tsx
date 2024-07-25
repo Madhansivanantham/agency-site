@@ -1,113 +1,170 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Avatar, AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
+import { MountainIcon, SearchIcon, MegaphoneIcon, BarChartIcon,  LinkedinIcon, FacebookIcon, InstagramIcon, TwitterIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+    <div className="flex flex-col min-h-[100dvh]">
+      <header className="flex items-center justify-between px-4 lg:px-6 h-16 bg-background border-b">
+        <Link href="#" className="flex items-center gap-2">
+          <MountainIcon className="h-6 w-6" />
+          <span className="text-lg font-semibold">Acme Digital</span>
+        </Link>
+        <nav className="hidden lg:flex items-center gap-6">
+          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
+            Home
+          </Link>
+          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
+            Services
+          </Link>
+          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
+            About
+          </Link>
+          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
+            Testimonials
+          </Link>
+          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
+            Contact
+          </Link>
+        </nav>
+        <Button>Get Started</Button>
+      </header>
+      <main className="flex-1">
+        <section className="bg-gradient-to-r from-primary to-primary-foreground py-20 md:py-32">
+          <div className="container px-4 md:px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="max-w-xl space-y-4">
+              <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground">Unlock Your Digital Potential</h1>
+              <p className="text-lg md:text-xl text-primary-foreground">
+                Discover our comprehensive digital marketing solutions to drive your business forward.
+              </p>
+              <Button variant="secondary">Learn More</Button>
+            </div>
+            <Image src="/hero.jpeg" width="500" height="400" alt="Hero" className="rounded-xl shadow-lg" />
+          </div>
+        </section>
+        <section className="py-12 md:py-24">
+          <div className="container px-4 md:px-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="space-y-2">
+                <SearchIcon className="h-8 w-8 text-primary" />
+                <h3 className="text-xl font-semibold">Search Engine Optimization</h3>
+                <p className="text-muted-foreground">
+                  Optimize your website to rank higher in search engine results and drive more organic traffic.
+                </p>
+              </div>
+              <div className="space-y-2">
+                <MegaphoneIcon className="h-8 w-8 text-primary" />
+                <h3 className="text-xl font-semibold">Social Media Marketing</h3>
+                <p className="text-muted-foreground">
+                  Leverage the power of social media to engage with your audience and build brand awareness.
+                </p>
+              </div>
+              <div className="space-y-2">
+                <BarChartIcon className="h-8 w-8 text-primary" />
+                <h3 className="text-xl font-semibold">Analytics and Reporting</h3>
+                <p className="text-muted-foreground">
+                  Gain valuable insights into your marketing campaigns and make data-driven decisions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="bg-muted py-12 md:py-24">
+          <div className="container px-4 md:px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold">What Our Clients Say</h2>
+                <p className="text-muted-foreground">
+                  Hear from our satisfied clients about their experience working with us.
+                </p>
+                <div className="space-y-4">
+                  <div className="bg-background p-4 rounded-lg shadow-sm">
+                    <p className="text-muted-foreground">
+                      "Acme Digital has been a game-changer for our business. Their expertise in digital marketing has
+                      helped us reach new heights."
+                    </p>
+                    <div className="flex items-center gap-2 mt-4">
+                      <Avatar>
+                        <AvatarImage src="/placeholder-user.jpg" />
+                        <AvatarFallback>JD</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <h4 className="font-semibold">John Doe</h4>
+                        <p className="text-sm text-muted-foreground">CEO, Acme Inc.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-background p-4 rounded-lg shadow-sm">
+                    <p className="text-muted-foreground">
+                      "The team at Acme Digital is truly exceptional. They've helped us achieve our marketing goals and
+                      exceed our expectations."
+                    </p>
+                    <div className="flex items-center gap-2 mt-4">
+                      <Avatar>
+                        <AvatarImage src="/placeholder-user.jpg" />
+                        <AvatarFallback>JD</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <h4 className="font-semibold">Jane Smith</h4>
+                        <p className="text-sm text-muted-foreground">CMO, Acme Corp.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold">Stay Up-to-Date</h2>
+                <p className="text-muted-foreground">
+                  Subscribe to our newsletter to receive the latest news and updates.
+                </p>
+                <form className="flex gap-2">
+                  <Input type="email" placeholder="Enter your email" className="flex-1" />
+                  <Button type="submit">Subscribe</Button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer className="bg-muted py-6 border-t">
+        <div className="container px-4 md:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2">
+            <MountainIcon className="h-6 w-6" />
+            <span className="text-sm font-medium">© 2024 Acme Digital</span>
+          </div>
+          <nav className="flex items-center gap-4">
+            <Link href="#" className="text-sm hover:underline underline-offset-4">
+              Privacy
+            </Link>
+            <Link href="#" className="text-sm hover:underline underline-offset-4">
+              Terms
+            </Link>
+            <Link href="#" className="text-sm hover:underline underline-offset-4">
+              Contact
+            </Link>
+          </nav>
+          <div className="flex items-center gap-4">
+            <Link href="#" className="text-muted-foreground hover:text-primary">
+              <TwitterIcon className="h-6 w-6" />
+            </Link>
+            <Link href="#" className="text-muted-foreground hover:text-primary">
+              <FacebookIcon className="h-6 w-6" />
+            </Link>
+            <Link href="#" className="text-muted-foreground hover:text-primary">
+              <InstagramIcon className="h-6 w-6" />
+            </Link>
+            <Link href="#" className="text-muted-foreground hover:text-primary">
+              <LinkedinIcon className="h-6 w-6" />
+            </Link>
+          </div>
         </div>
-      </div>
+      </footer>
+    </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   );
 }
