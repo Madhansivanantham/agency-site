@@ -12,7 +12,7 @@ export default function Home() {
       <header className="flex items-center justify-between px-4 lg:px-6 h-16 bg-background border-b">
         <Link href="#" className="flex items-center gap-2">
           <MountainIcon className="h-6 w-6" />
-          <span className="text-lg font-semibold">Acem Digital</span>
+          <span className="text-lg font-semibold">Acme Digital</span>
         </Link>
         <nav className="hidden lg:flex items-center gap-6">
           <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
