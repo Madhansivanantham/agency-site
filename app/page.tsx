@@ -84,8 +84,8 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="bg-background p-4 rounded-lg shadow-sm">
                     <p className="text-muted-foreground">
-                      "Acme Digital has been a game-changer for our business. Their expertise in digital marketing has
-                      helped us reach new heights."
+                      Acme Digital has been a game-changer for our business. Their expertise in digital marketing has
+                      helped us reach new heights.
                     </p>
                     <div className="flex items-center gap-2 mt-4">
                       <Avatar>
@@ -100,8 +100,8 @@ export default function Home() {
                   </div>
                   <div className="bg-background p-4 rounded-lg shadow-sm">
                     <p className="text-muted-foreground">
-                      "The team at Acme Digital is truly exceptional. They've helped us achieve our marketing goals and
-                      exceed our expectations."
+                      The team at Acme Digital is truly exceptional. They have helped us achieve our marketing goals and
+                      exceed our expectations.
                     </p>
                     <div className="flex items-center gap-2 mt-4">
                       <Avatar>
